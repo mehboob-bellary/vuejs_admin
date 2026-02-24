@@ -1,75 +1,26 @@
-# Nuxt Minimal Starter
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
-
-Make sure to install dependencies:
-
-```bash
-# npm
+# Install npm packages
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Run the Nuxt application
 npm run dev
 
-# pnpm
-pnpm dev
+# Open URL
+http://localhost:3000/
 
-# yarn
-yarn dev
+✅ Features Covered
 
-# bun
-bun run dev
-```
+Admin login with automatic redirect to the dashboard
 
-## Production
+Protected routes — dashboard pages are not accessible without login
 
-Build the application for production:
+Login page protection — logged-in users cannot access the login page again
 
-```bash
-# npm
-npm run build
+Customers list integration using API
 
-# pnpm
-pnpm build
+Products list integration using API
 
-# yarn
-yarn build
+Responsive Header, Sidebar Menu, and Mobile layout
 
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Logout Function

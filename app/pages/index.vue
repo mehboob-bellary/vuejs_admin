@@ -147,13 +147,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 const email = ref('')
 const password = ref('')
 const showPassword = ref(false)
 const loading = ref(false)
 const error = ref("")
 const alertMessage = ref('')
+
+const router = useRouter()
+
+
+onMounted(() => {
+  if (localStorage.getItem('userToken')) {
+    router.push('/dashboard')
+  }
+})
 
 const togglePasswordVisibility = () => {
   showPassword.value = !showPassword.value

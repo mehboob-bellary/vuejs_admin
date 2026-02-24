@@ -1,4 +1,5 @@
 <script setup>
+
 definePageMeta({
   layout: 'dashboard',
   title: 'Dashboard Overview'
@@ -6,5 +7,5 @@ definePageMeta({
 </script>
 
 <template>
-  <h3>Total number of users and products</h3>
+  <h3>Visit the Products and Customers lists to view related data.</h3>
 </template>

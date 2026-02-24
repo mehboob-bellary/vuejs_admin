@@ -1,10 +1,23 @@
 <script setup>
+import { onMounted } from 'vue'
 import { useRoute } from '#app'
 import Sidebar from "@/components/layout/Sidebar"
 import { useSidebar } from "@/components/layout/useSidebar"
 
 const route = useRoute()
+const router = useRouter()
 const { toggleMobile } = useSidebar()
+
+definePageMeta({
+  layout: 'dashboard',
+  title: 'Dashboard Overview'
+})
+
+onMounted(() => {
+  if (!localStorage.getItem('userToken')) {
+    router.push('/')
+  }
+})
 
 </script>
 
@@ -33,10 +46,7 @@ const { toggleMobile } = useSidebar()
           ☰
         </button>
 
-        <h1 class="ml-4 font-semibold">{{ route.meta.title || 'Vue Dashboard' }}
-
-          <span class="text-right">Logout</span>
-        </h1>
+        <h1 class="ml-4 font-semibold">{{ route.meta.title || 'Vue Dashboard' }} </h1>
       </header>
 
       <!-- ✅ CONTENT -->
